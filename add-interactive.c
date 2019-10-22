@@ -788,7 +788,7 @@ static int get_untracked_files(struct repository *r,
 
 	prefix_item_list_clear(files);
 	setup_standard_excludes(&dir);
-	add_pattern_list(&dir, EXC_CMDL, "--exclude option");
+	add_exclude_list(&dir, EXC_CMDL, "--exclude option");
 	fill_directory(&dir, r->index, ps);
 
 	for (i = 0; i < dir.nr; i++) {
